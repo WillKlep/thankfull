@@ -213,15 +213,10 @@ router.put("/myprofile", checkUserOwnership, upload.single('image'), function(re
             }
     User.findOne({username:req.body.user.username.toLowerCase()},function(err,existingUser){
 		if(existingUser == null){
+			foundUser.username = req.body.user.username.toLowerCase();
 			User.findOne({email:req.body.user.email},function(err,existingEmail){
 				if(existingEmail == null){
-					foundUser.username = req.body.user.username.toLowerCase();
-					foundUser.fName = req.body.user.fName;
-					foundUser.lName = req.body.user.lName;
 					foundUser.email = req.body.user.email;
-					foundUser.save();
-					req.flash("success","Successfully Updated!");
-					res.redirect("/myprofile");
 				}
 				else{
 					req.flash("error","Someone else has that email, please enter a different one");
@@ -233,6 +228,11 @@ router.put("/myprofile", checkUserOwnership, upload.single('image'), function(re
 			req.flash("error","Someone else has that username, please enter a different one");
 			res.redirect("/myprofile");
 		}
+					foundUser.fName = req.body.user.fName;
+					foundUser.lName = req.body.user.lName;
+					foundUser.save();
+					req.flash("success","Successfully Updated!");
+					res.redirect("/myprofile");
 	});
         }
 	});

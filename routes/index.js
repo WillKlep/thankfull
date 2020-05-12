@@ -4,9 +4,9 @@ var express 					   = require("express"),
  	passport 					   = require("passport"),
  	{check, validationResult,body} = require("express-validator"),
  	async 						   = require("async");
-const mailgun 					   = require("mailgun-js"),
- 	  DOMAIN 					   = "sandbox271ead1122e84408b98edb87e5686a9f.mailgun.org",
-	  mg                           = mailgun({apiKey: process.env.MAILGUN_APIKEY, domain: DOMAIN}),
+const mailgun = require("mailgun-js");
+const DOMAIN = "sandboxe7e8843803bb40c3982d102aceba50b6.mailgun.org";
+const mg = mailgun({apiKey: "584a53d48a0e886ff599624d563cdfca-3e51f8d2-e1a78eaa", domain: DOMAIN});
  	  crypto                       = require("crypto"),
 	  localStrategy                = require("passport-local");
  
@@ -60,7 +60,7 @@ router.post("/signup",function(req,res){
 						User.register(newUser,req.body.password, function(err,user){
 							if(err){
 								console.log(err);
-								req.flash("error","We couldn't sign you up. Please try again.");
+								req.flash("error","We couldn't sign you up. Please try again. All fields are required.");
 								return res.redirect("/signup");
 							}else{
 								passport.authenticate("local")(req,res,function(){
@@ -222,15 +222,18 @@ router.get("/contact",function(req,res){
 });
 
 router.post("/contact",function(req,res){
-	const contactMessage = {
+	
+	var contactMessage = {
 		from: req.body.email,
 		to: "thankfullteam@gmail.com",
 		subject: req.body.title,
 		text: req.body.text
-	};
+	};//eval(require("locus"));
 	mg.messages().send(contactMessage,function(error, body){
 		if(error){
 			req.flash("error","Your message could not be sent, please try again!");
+			res.redirect("back");
+			console.log(error);
 		}
 		else{
 			console.log(body);
