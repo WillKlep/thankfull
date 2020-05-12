@@ -225,14 +225,13 @@ router.put("/myprofile", checkUserOwnership, upload.single('image'), function(re
 			});
         }
 		else{
+			existingUser.fName = req.body.user.fName;
+			existingUser.lName = req.body.user.lName;
+			existingUser.save();
 			req.flash("error","Someone else has that username, please enter a different one");
 			res.redirect("/myprofile");
+			
 		}
-					foundUser.fName = req.body.user.fName;
-					foundUser.lName = req.body.user.lName;
-					foundUser.save();
-					req.flash("success","Successfully Updated!");
-					res.redirect("/myprofile");
 	});
         }
 	});
