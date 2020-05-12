@@ -204,6 +204,7 @@ router.put("/myprofile", checkUserOwnership, upload.single('image'), function(re
                   var result = await cloudinary.v2.uploader.upload(req.file.path);
                   foundUser.imageId = result.public_id;
                   foundUser.image = result.secure_url;
+				  foundUser.save();
               } catch(err) {
 				  console.log(err);
                   req.flash("error", err.message);
