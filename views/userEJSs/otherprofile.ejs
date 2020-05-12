@@ -1,0 +1,32 @@
+<%-include("../partials/header")%>
+<h1>
+	<%=user.username%>
+</h1>
+<div class="row">
+	<div class="col-md-4">
+	<!-- name and image	 -->
+		<div class="container">
+			<h3><%=user.fName + " " + user.lName%></h3>
+			<img class="rounded-circle" src="<%= user.image %>">
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="col-md-4">
+		<!-- good list -->
+		<h5>Good List:</h5>
+		<%user.good.forEach(function(item){%>
+			<li><%=item.text%></li>
+		<%})%>
+	</div>
+	<br>
+	<br>
+	<div class="col-md-4">
+		<!-- myself list -->
+		<h5>Myself List:</h5>
+		<%user.myself.forEach(function(item){%>
+			<li><%=item.text%></li>
+		<%})%>
+	</div>
+</div>
+<%-include("../partials/footer")%>

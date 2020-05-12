@@ -1,0 +1,45 @@
+<%-include("../partials/header")%>
+<h1>Your Profile</h1>
+<p>Please note: if you update your username, you will be asked to sign in again.</p>
+<form action="/myprofile?_method=PUT" method="POST" enctype="multipart/form-data">
+<div class="row">
+	<div class="container">
+		<div class="col-md-4">
+			<!-- picture -->
+			<img class="rounded-circle" src="<%= currentUser.image %>">
+			<div class="form-group">
+				<label for="image"><strong>Image Upload:</strong></label>
+				<input type="file" name="image" accept="image/*">
+			</div>
+		</div>
+		<div class="col-md-4">
+			<!-- user, fName, lName, email -->
+			<div class="form-group">
+				<label for="username"><strong>Username:</strong></label>
+				<input type="text" name="user[username]" value="<%=currentUser.username%>">
+			</div>
+			<div class="form-group">
+				<label for="fName"><strong>First name:</strong></label>
+				<input type="text" name="user[fName]" value="<%=currentUser.fName%>">
+			</div>
+			<div class="form-group">
+				<label for="lName"><strong>Last name:</strong></label>
+				<input type="text" name="user[lName]" value="<%=currentUser.lName%>">
+			</div>
+			<div class="form-group">
+				<label for="email"><strong>Email:</strong></label>
+				<input type="email" name="user[email]" value="<%=currentUser.email%>">
+			</div>
+		</div>
+		<div class="col-md-4">
+			<button class="btn btn-success">Save Changes</button>
+		</div>	
+	</div>
+</div>
+</form>
+
+<form action="/myprofile?_method=DELETE" method="POST">
+	<button class="btn btn-danger">Delete Account</button>
+</form>
+
+<%-include("../partials/footer")%>

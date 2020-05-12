@@ -1,0 +1,30 @@
+<%-include("partials/header")%>
+
+<div class="container">
+	<div class="row justify-content-center align-items-center">
+		<div class="col-sm-6">
+			<h4 class="card-title">Sign In</h4>
+				<div class="card">
+					<div class="card-body">
+						<form action="/signin" method="POST">
+							<div class="form-group">
+								<label for="username"><strong>Username</strong></label>
+								<br>
+								<input type="text" name="username" placeholder="Username" required>
+							</div>
+							<div class="form-group">
+								<label for="password"><strong>Password</strong></label>
+								<br>
+								<input type="password" name="password" placeholder="Password" required>
+							</div>
+							<button class="btn btn-success">Submit!</button>
+						</form>
+					</div>
+				</div>
+			<a class="sign_link" href="/signup">Don't have an account? Sign up here!</a>
+			<a class="sign_link" href="/forgot">Forget your password? Click here!</a>
+		</div>
+	</div>
+</div>
+
+<%-include("partials/footer")%>

@@ -1,0 +1,164 @@
+.navbar.navbar-expand-lg.navbar-dark{
+	background-color: #00a336;
+}
+.navbar-brand{
+	font-family: 'Righteous', cursive;
+}
+.nav-item.signInUp{
+	text-align: right;
+}
+.rounded-circle{
+	width: 350px;
+	height: 350px;
+}
+.rounded-circle.otherslists{
+	width: 200px;
+	height: 200px;
+}
+.col-md-4{
+	padding-bottom: 20px;
+}
+.search{
+	display: inline;
+}
+.sign_link{
+	padding-top: 20px;
+	display: block;
+	text-align: center;
+}
+.sign_link:link{
+	color: #00a336;
+}
+.sign_link:visited{
+	color: #00a336;
+}
+.sign_link:hover{
+	color: #00a336;
+}
+.container-alert{
+	padding-top: 50px;
+}
+.card-title{
+	text-align: center;
+	padding-top: 10px;
+}
+.col-sm-3{
+	padding-top: 100px;
+}
+.col-sm-6.home{
+	padding-top: 50px;
+}
+.card{
+	box-shadow: 0px 5px 5px grey;
+	
+}
+.card-body{
+	text-align: center;
+}
+.goodList{
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	display: none;
+}
+.myselfList{
+	text-align: center;
+	list-style: none;
+	padding: 0;
+	display: none;
+}
+body{
+	padding-bottom: 100px; 
+}
+.checkbox {
+  display: inline-flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox>span {
+  color: #34495E;
+  padding: 0rem 0.25rem 0rem 0.5rem;
+}
+
+.checkbox>input {
+  height: 25px;
+  width: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  outline: none;
+  transition-duration: 0.3s;
+  background-color: #00a336; /*background not clicked -Navbar green*/
+  cursor: pointer;
+}
+
+.checkbox>input:checked {
+  border: 1px solid #00a336; /*border clicked -Navbar green*/
+  background-color: #00a336; /*background clicked -Navbar green*/
+}
+
+.checkbox>input:checked+span::before {
+  content: '\2713';
+  display: block;
+  text-align: center;
+  color: #fff; /*checkmark color*/
+  position: absolute;
+  left: 0.4rem;
+  top: 0.1rem;
+}
+
+.checkbox>input:active {
+  border: 2px solid #000; /*click*/
+}
+
+li{
+	list-style-type: none;
+}
+.input-list{
+	width: 300px;
+}
+.mylistsedit{
+	width: 500px;
+}
+
+.Page.navigation{
+	padding-top: 40px;
+}
+.Page.navigation .pagination.justify-content-center .page-item.disabled .page-link{
+	color: #a3a3a3;
+} 
+.Page.navigation .pagination.justify-content-center .page-item.active .page-link{
+	background-color: #00a336;
+	color: #fff;
+	border-color: #00a336;
+}
+.Page.navigation .pagination.justify-content-center .page-link{
+	color: #00a336;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 80px;
+}
+footer {
+	background-color: #F8F8F8;
+    border-top: 1px solid #E7E7E7;
+    text-align:center;
+    padding: 15px;
+	
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+}
+#thankfullhome{
+	font-family: 'Righteous', cursive;
+	color: #00a336;
+}
