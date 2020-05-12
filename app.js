@@ -36,7 +36,7 @@ mongoose.set('useUnifiedTopology', true);
 
 var db_url = process.env.DBURL || "mongodb://localhost/thankfull_db"
 
-mongoose.connect("mongodb+srv://willklep:LGhNyZhnDVOhUPUf@thankfull-bna6g.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect(db_url);
 app.use(flash());
 
 //express-session stuff
