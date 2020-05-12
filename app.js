@@ -36,7 +36,7 @@ mongoose.set('useUnifiedTopology', true);
 
 var db_url = process.env.DBURL || "mongodb://localhost/thankfull_db"
 
-mongoose.connect(db_url);
+mongoose.connect("mongodb+srv://willklep:LGhNyZhnDVOhUPUf@thankfull-bna6g.mongodb.net/test?retryWrites=true&w=majority");
 app.use(flash());
 
 //express-session stuff
@@ -70,6 +70,10 @@ app.use(userRoute);
 app.use(indexRoute);
 
 
-app.listen(3000, process.env.IP, function(){
-	console.log("Server is up!");
+var port = process.env.PORT || 3000;
+
+app.listen(port, function () {
+
+console.log("Server Has Started!");
+
 });
