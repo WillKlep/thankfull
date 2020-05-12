@@ -40,6 +40,7 @@ mongoose.connect(db_url);
 app.use(flash());
 
 //express-session stuff
+//mongodb+srv://willklep:<password>@thankfull-bna6g.mongodb.net/test?retryWrites=true&w=majority
 app.use(require("express-session")({
 	secret: "ur3gi3r3irh3urgbvfhjfgsdjfskgfeyuf3grukj3rugh3fgekfjegrfakliawdhaliueaf",
 	resave: false,
