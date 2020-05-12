@@ -6,7 +6,7 @@ var express 					   = require("express"),
  	async 						   = require("async");
 const mailgun 					   = require("mailgun-js"),
  	  DOMAIN 					   = "sandbox271ead1122e84408b98edb87e5686a9f.mailgun.org",
-	  mg                           = mailgun({apiKey: MAILGUN_APIKEY, domain: DOMAIN}),
+	  mg                           = mailgun({apiKey: process.env.MAILGUN_APIKEY, domain: DOMAIN}),
  	  crypto                       = require("crypto"),
 	  localStrategy                = require("passport-local");
  
