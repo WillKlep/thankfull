@@ -5,8 +5,8 @@ var express 					   = require("express"),
  	{check, validationResult,body} = require("express-validator"),
  	async 						   = require("async");
 const mailgun = require("mailgun-js");
-const DOMAIN = "sandboxe7e8843803bb40c3982d102aceba50b6.mailgun.org";
-const mg = mailgun({apiKey: "584a53d48a0e886ff599624d563cdfca-3e51f8d2-e1a78eaa", domain: DOMAIN});
+const DOMAIN = "HIDDEN";
+const mg = mailgun({apiKey: "HIDDEN", domain: DOMAIN});
  	  crypto                       = require("crypto"),
 	  localStrategy                = require("passport-local");
  
