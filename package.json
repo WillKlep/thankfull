@@ -12,7 +12,7 @@
   "dependencies": {
     "async": "^3.2.0",
     "bad-words": "^3.0.3",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "bootstrap-icons": "^1.0.0-alpha3",
     "check-node-version": "^4.0.3",
     "cloudinary": "^1.21.0",
@@ -21,7 +21,7 @@
     "cookie-session": "^1.4.0",
     "crypto": "^1.0.1",
     "ejs": "^3.1.2",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-session": "^1.17.1",
     "express-validator": "^6.4.0",
     "locus": "^2.0.4",
